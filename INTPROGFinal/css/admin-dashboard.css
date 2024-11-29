@@ -1,0 +1,139 @@
+/* Reset default margin and padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* General Body Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f7fa; /* light background stays the same */
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Sidebar Navigation Styles */
+nav {
+    width: 250px;
+    background-color: #ff6f61; /* red background for sidebar */
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding-top: 20px;
+}
+
+nav ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+nav ul li {
+    margin-bottom: 15px;
+}
+
+nav ul li a {
+    display: block;
+    padding: 15px;
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    transition: background-color 0.3s ease;
+}
+
+nav ul li a:hover {
+    background-color: #ff6f61; /* lighter red for hover effect */
+}
+
+nav ul li a.active {
+    background-color: #ff6f61; /* darker red for active state */
+}
+
+/* Main Content Area Styles */
+.container {
+    margin-left: 270px;
+    padding: 30px;
+    max-width: 1200px;
+    width: 100%;
+}
+
+h2 {
+    font-size: 32px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+p {
+    font-size: 18px;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+.container p {
+    font-size: 16px;
+    line-height: 1.8;
+}
+
+/* Styling for Buttons and Links */
+a {
+    text-decoration: none;
+    color: #00b3e6; /* sky blue color for links */
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #0099cc; /* darker blue for hover */
+}
+
+button {
+    background-color: #00b3e6; /* sky blue button */
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #0099cc; /* darker sky blue for hover */
+}
+
+/* Footer Styles */
+footer {
+    background-color: #ff6f61; /* red footer */
+    color: white;
+    text-align: center;
+    padding: 20px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+footer p {
+    font-size: 16px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    /* Reduce sidebar width and make it collapsible */
+    nav {
+        width: 200px;
+    }
+    .container {
+        margin-left: 220px;
+    }
+}
+
+@media (max-width: 480px) {
+    /* Collapse sidebar completely on small screens */
+    nav {
+        width: 0;
+        display: none;
+    }
+    .container {
+        margin-left: 0;
+        padding: 15px;
+    }
+}
